@@ -1,0 +1,8 @@
+export MAX_VARIABLE=131224-wdm
+date +%D >> /opt/131224-wdm/rechyn/.process_management
+echo “Welcome to Amazon server” >> /opt/131224-wdm/rechyn/.process_management
+free -h | grep Mem | awk {'print $2'} >> /opt/131224-wdm/rechyn/.process_management
+ps -ef | grep root | grep -v grep | wc -l >> /opt/131224-wdm/rechyn/.process_management
+env | grep MAX >> /opt/131224-wdm/rechyn/.process_management
+ps -ef | grep "/usr/sbin/sshd -D" | grep -v grep | awk '{print "PID", $2, "PPID", $3}' >> /opt/131224-wdm/rechyn/.process_management
+cat /opt/131224-wdm/rechyn/.process_management
