@@ -1,0 +1,15 @@
+Filesystem      Size  Used Avail Use% Mounted on
+devtmpfs        468M     0  468M   0% /dev
+tmpfs           477M     0  477M   0% /dev/shm
+#!/bin/bash
+
+USER=MAX
+echo "$USER, Я работаю из директории: $(pwd)"
+ 1001  vi /tmp/file_max.txt
+ 1002  df -h | head -3 >> /tmp/file_max.txt
+ 1003  chmod g+wx,o-rwx /tmp/file_max.txt
+ 1004  touch myfirstbashscript_max.sh
+ 1005  chmod +x myfirstbashscript_max.sh
+ 1006  vi myfirstbashscript_max.sh
+ 1007  cat myfirstbashscript_max.sh >> /tmp/file_max.txt
+ 1008  history | tail -n 8 >> /tmp/file_max.txt
